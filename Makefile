@@ -12,7 +12,6 @@ help:
 	$(info -> build                   builds binary)
 	$(info -> test                    runs available tests)
 	$(info -> run                     starts server locally)
-	$(info -> publish                 pushes master to heroku)
 	$(info -> logs                	  views heroku logs)
 
 .PHONY: setup
@@ -38,10 +37,6 @@ test:
 .PHONY: run
 run:
 	go run ./$(MODULE_NAME)
-
-.PHONY: publish
-publish:
-	git push heroku master
 
 .PHONY: logs
 logs:
