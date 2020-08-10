@@ -1,22 +1,20 @@
 package main
 
 import (
-	"errors"
-
-	"github.com/kelseyhightower/envconfig"
+		"os"
+    "github.com/joho/godotenv"
 )
 
 type Config struct {
-	Port string `envconfig:"AURASOCIAL_PORT" default:"8888"`
+	Port string
 }
 
-func NewConfig() (*Config, error) {
-	cfg := Config{}
+func NewConfig() *Config {
+	godotenv.Load()
 
-	err := envconfig.Process("AURASOCIAL", &cfg)
-	if err != nil {
-		return nil, errors.New("error to process env variables")
+	cfg := Config{
+		Port: os.Getenv("PORT"),
 	}
 
-	return &cfg, nil
+	return &cfg
 }

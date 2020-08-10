@@ -6,10 +6,7 @@ import (
 )
 
 func main() {
-	cfg, err := NewConfig()
-	if err != nil {
-		log.Fatalf("Failed to initialize config: %s", err)
-	}
+	cfg := NewConfig()
 
 	api := API{cfg: cfg}
 	log.Println("Initalizing server at port " + cfg.Port)
