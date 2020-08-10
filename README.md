@@ -15,7 +15,7 @@ Installs dependency modules.
 Format all files using `go fmt`.
 
 ### `make build`
-Build source files into an executable binary called `aura.bin`.
+Build source files into an executable binary.
 
 ### `make test`                    
 Runs available tests.
