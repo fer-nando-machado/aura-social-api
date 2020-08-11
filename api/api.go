@@ -17,9 +17,8 @@ func (api *API) Routes() *chi.Mux {
 	mux := chi.NewRouter()
 
 	mux.Use(cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://fernandomachado90.github.io"},
-		AllowCredentials: true,
-		Debug:            true,
+		AllowedOrigins: []string{api.cfg.AllowedOrigin},
+		Debug:          true,
 	}).Handler)
 
 	mux.Get("/", api.handleGetRoot())
