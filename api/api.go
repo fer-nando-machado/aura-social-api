@@ -21,7 +21,7 @@ func (api *API) Routes() *chi.Mux {
 		Debug:          true,
 	}).Handler)
 
-	mux.Get("/", api.handleGetRoot())
+	mux.Get("/", api.handleGetFrontend())
 	mux.Get("/healthcheck", api.handleGetHealthcheck())
 	mux.Post("/authorize", api.handlePostAuthorize())
 

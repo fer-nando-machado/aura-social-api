@@ -8,6 +8,7 @@ import (
 
 type Config struct {
 	Port            string
+	FrontendApp     string
 	AllowedOrigin   string
 	InstagramSecret string
 }
@@ -17,6 +18,7 @@ func NewConfig() *Config {
 
 	cfg := Config{
 		Port:            os.Getenv("PORT"),
+		FrontendApp:     os.Getenv("FRONTEND_APP"),
 		AllowedOrigin:   os.Getenv("ALLOWED_ORIGIN"),
 		InstagramSecret: os.Getenv("INSTAGRAM_CLIENT_SECRET"),
 	}
