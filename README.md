@@ -1,6 +1,6 @@
 # aura-social-api
 
-API backend for **Aura Social**. See also [aura-social](https://github.com/fer-nando-machado?tab=repositories) for frontend.
+API backend for **Aura Social**. See also [aura-social](https://github.com/fer-nando-machado/aura-social) for frontend.
 
 ## Requisites
 
